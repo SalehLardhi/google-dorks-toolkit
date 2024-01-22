@@ -2,14 +2,15 @@
 
 ![GoogleDorks Toolkit](https://raw.githubusercontent.com/SalehLardhi/google-dorks-toolkit/main/image.png)
 
-GoogleDorks Toolkit is a Python script designed to help security researchers and penetration testers automate Google dorking for finding potential vulnerabilities and information about a target domain. The tool utilizes Google search queries, also known as Google dorks, to identify possible security issues and gather valuable information.
+GoogleDorks Toolkit is a Python script designed to help security researchers and penetration testers automate Google dorking for finding potential vulnerabilities and information about a target domain. The tool utilizes Google search queries, also known as Google hacks, to identify possible security issues and gather valuable information.
 
 ## Features
 
-- **Customizable Dorks**: Users can provide their own list of dorks to be used in the Google search queries.
+- **Customizable Dorks**: Users can provide their own list of dorks to be used in the Google search queries with huge list of default Google Dorks list.
 - **Domain Search**: The tool allows users to specify a target domain for the Google dorking process.
 - **Results Output**: Search results are saved to an output file, providing a convenient way to review and analyze the findings.
-- **Vulnerability Detection**: Optional detection of vulnerabilities by searching for the identified domains in a specified file (`OpenForReport.txt` in this case).
+- **Detailed Results**: Not only the vulnerable webapps and the dork, but also the auther and reference link of the dork for more information.
+- **Vulnerability Disclosure and Bug Bounty Checker**: Optional detection of vulnerabilities by searching for the identified domains in existing file `OpenForReport.txt` which own VDP or BBP programs to report legally.
 
 ## Usage
 
@@ -27,20 +28,32 @@ pip install googlesearch-python
 pip install pyfiglet
 ```
 
+### Kali Linux
+```
+apt update; apt upgrade
+git clone https://github.com/SalehLardhi/google-dorks-toolkit.git
+cd google-dorks-toolkit
+```
+### Termux
+```
+pkg update; pkg upgrade
+git clone https://github.com/SalehLardhi/google-dorks-toolkit.git
+cd google-dorks-toolkit
+```
 
 
 ## Command-line Arguments
 
-    - `-d`, `--domain`: Specify the target domain for Google dorking.
-    - `-n`, `--number_of_pages`: Set the number of pages to search.
-    - `-t`, `--time`: Specify the time between requests to avoid being blocked by Google.
+    - `-d`, `--domain`: Specify the target domain for Google dorking (required).
+    - `-n`, `--number_of_pages`: Set the number of pages to search (required).
+    - `-t`, `--time`: Specify the time between requests to avoid being blocked by Google (required).
     - `-o`, `--output`: (Optional) Specify the output file name for saving the results.
-    - `--search`: (Optional) Search matched domains in OpenForReport.txt.
+    - `--search`: (Optional) Search matched domains in OpenForReport.txt, note that the output should be yes or y only.
     - `-l`, `--list`: (Optional) Add your own dorks list.
 
 ## Example
 ```
-python google_dorks_toolkit.py -d example.com -n 5 -t 2 -o results.txt --search yes
+python google_dorks_toolkit.py -d example.com -n 5 -t 5 -o results.txt --search yes
 ```
 
 ## Developers

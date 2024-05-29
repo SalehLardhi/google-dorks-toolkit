@@ -67,7 +67,7 @@ try:
             dorks = dorks_file.readlines()
 
         for dork_line in dorks:
-            Dork, author, references, severity = map(str.strip, dork_line.split('-'))
+            Dork, author, references, severity = map(str.strip, dork_line.split('<>'))
             query = f'{Dork} site:{domain}'
 
             print(f'\nChecking Dork: {query} - {author} - {references} - {severity}')

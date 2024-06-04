@@ -24,8 +24,8 @@ GoogleDorks Toolkit is a Python script designed to help security researchers and
 
 
 ```
-pip install googlesearch-python
-pip install pyfiglet
+chmod +x setup.sh
+./setup.sh
 ```
 
 ### Kali Linux

@@ -53,7 +53,7 @@ cd google-dorks-toolkit
 
 ## Example
 ```
-python google_dorks_toolkit.py -d example.com -n 5 -t 5 -o results.txt --search yes
+python GoogleDorks-toolkit.py -d example.com -n 5 -t 5 -o results.txt --search yes
 ```
 
 ## Developers
